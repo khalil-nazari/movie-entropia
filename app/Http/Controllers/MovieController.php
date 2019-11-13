@@ -61,7 +61,7 @@ class MovieController extends Controller
             'name' => $request->name,
             'year_of_release' => $request->year_of_release,
             'plot' => $request->plot,
-            'actor_id' => $request->actor_id,
+            'actor_id'=>$request->actor_id,
             'producer_id' => $request->producer_id,
         ]); 
         $actors = $request['actor_id'];
@@ -70,12 +70,12 @@ class MovieController extends Controller
         $image_new_name = 'movie_' . date('YmdHis') .'.' . $image->getClientOriginalExtension();
         $image->move(public_path('images'), $image_new_name);
         $data_array['image'] = $image_new_name; 
-
+        
         // save to movie table 
         $data_array->save();
-
+        
         // attach movie and actors 
-        $movie->actors()->attach($actors);
+        $data_array->actors()->attach($actors);
         return redirect('/movies')->with('success', 'Image Uploaded Successfully');
     }
 

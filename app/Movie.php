@@ -8,7 +8,7 @@ use App\Producer;
 
 class Movie extends Model
 {
-    protected $fillable = ['name', 'year_of_release', 'plot', 'image'];
+    protected $fillable = ['name', 'year_of_release', 'plot', 'image', 'producer_id'];
 
     public function actors(){
         return $this->belongsToMany(Actor::class);
