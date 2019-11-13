@@ -1,7 +1,7 @@
-### This is a Laravel project 
+## This is a Laravel project 
 
-## Instruction on how to download and run 
-1. Download and unzip the file "movie". 
+### Instruction on how to download and run 
+1. Clone the project using : https://github.com/khalil-nazari/movie-entropia.git
 2. Move the application file to your PHP server. ( You have to have installed PHP server like XAMPP  )
 3. Create the database only and name it "movie". 
 4. In the project directory, open ".env" file and change the database username and password.
